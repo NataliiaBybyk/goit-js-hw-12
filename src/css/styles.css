@@ -158,3 +158,47 @@ section {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
   }
 }
+
+.btn-add {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #4e75ff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 150px;
+  border-color: transparent;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.load-btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 125px;
+  background: #4e75ff;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border-color: transparent;
+  outline-offset: 4px;
+  margin-top: 32px;
+
+  transition: background 300ms ease-in-out;
+}
+
+.load-btn:hover {
+  background: #6c8cff;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
