@@ -4,15 +4,71 @@
   | default @import url()
   |============================
 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
 /* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+
+@import url('./form.css');
+@import url('./search-form.css');
+
+@import url('./loader.css');
+
+.gallery {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.gallery-item {
+  border: 1px solid #060606;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+}
+
+.gallery-item .link {
+  grid-column: 1/-1;
+}
+
+.gallery-item .link img {
+  width: 100%;
+  aspect-ratio: 9/5;
+  object-fit: cover;
+}
+
+.gallery-item .information {
+  text-align: center;
+  background: #fff;
+  padding: 4px;
+}
+
+.gallery-item .information h4 {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  margin: 0;
+}
+
+.gallery-item .information p {
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.iziToast > .iziToast-close:hover {
+  background-color: transparent;
+}
