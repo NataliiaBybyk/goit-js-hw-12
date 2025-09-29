@@ -60,10 +60,6 @@ function showLoader() {
 }
 
 function hideLoader() {
-  const loader = document.querySelector('.loader');
-  if (loader.length < 0) {
-    return;
-  }
   loader.classList.add('hide');
 }
 
