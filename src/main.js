@@ -76,7 +76,7 @@ async function moreButtonHandler(event) {
   const button = event.currentTarget;
   pageNumber += 1;
   showLoader();
-  button.disadle = true;
+  button.disadled = true;
 
   try {
     const { data, totalPages } = await getImagesByQuery(
@@ -96,7 +96,7 @@ async function moreButtonHandler(event) {
 
     createGallery(data);
 
-    if (!pageNumber >= totalPages) {
+    if (pageNumber >= totalPages) {
       hideLoadMoreButton();
       iziToast.error({
         message: "We're sorry, but you've reached the end of search results",
@@ -122,6 +122,6 @@ async function moreButtonHandler(event) {
     });
   } finally {
     hideLoader();
-    button.disadle = false;
+    button.disadled = false;
   }
 }
